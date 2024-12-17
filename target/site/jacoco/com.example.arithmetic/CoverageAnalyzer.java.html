@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CoverageAnalyzer.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">arithmetic</a> &gt; <a href="index.source.html" class="el_package">com.example.arithmetic</a> &gt; <span class="el_source">CoverageAnalyzer.java</span></div><h1>CoverageAnalyzer.java</h1><pre class="source lang-java linenums">package com.example.arithmetic;
+
+import org.jacoco.core.*;
+import org.jacoco.core.analysis.*;
+import org.jacoco.core.tools.ExecFileLoader;
+
+import java.util.List;
+import org.jacoco.core.analysis.*;
+import org.jacoco.core.data.ExecutionData;
+
+import org.jacoco.core.data.ExecutionDataStore;
+import org.jacoco.core.analysis.IMethodCoverage;
+
+import java.io.File;
+import java.io.IOException;
+
+<span class="nc" id="L17">public class CoverageAnalyzer {</span>
+    
+    public static void main(String[] args) throws IOException {
+        // Path to the JaCoCo execution data file generated after tests run
+<span class="nc" id="L21">        String execFilePath = &quot;/home/bekkouche/Documents/Research/FaultLocalizationPFEProject/ArithmeticProject/target/jacoco.exec&quot;;  // Adjust this if needed</span>
+<span class="nc" id="L22">        ExecFileLoader loader = new ExecFileLoader();</span>
+<span class="nc" id="L23">        loader.load(new File(execFilePath));</span>
+        
+        // Iterate through the execution data and extract coverage details
+<span class="nc bnc" id="L26" title="All 2 branches missed.">        for (ExecutionData data : loader.getExecutionDataStore().getContents()) {</span>
+<span class="nc" id="L27">            System.out.println(&quot;Class: &quot; + data);</span>
+<span class="nc" id="L28">        }</span>
+<span class="nc" id="L29">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

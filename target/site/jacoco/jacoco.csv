@@ -1,0 +1,5 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+arithmetic,com.example.arithmetic,TritypeCorrect,11,90,10,24,4,20,11,8,1,1
+arithmetic,com.example.arithmetic,CoverageAnalyzer,39,0,2,0,8,0,3,0,2,0
+arithmetic,com.example.arithmetic,Tritypev1,8,93,10,24,3,21,10,9,0,2
+arithmetic,com.example.arithmetic,ArithmeticOperations,28,0,2,0,7,0,6,0,5,0

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TritypeCorrect.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">arithmetic</a> &gt; <a href="index.source.html" class="el_package">com.example.arithmetic</a> &gt; <span class="el_source">TritypeCorrect.java</span></div><h1>TritypeCorrect.java</h1><pre class="source lang-java linenums">package com.example.arithmetic;
+
+<span class="nc" id="L3">public class TritypeCorrect {</span>
+	
+	public static int tritype (int i, int j, int k) {
+		int trityp;
+<span class="pc bpc" id="L7" title="3 of 6 branches missed.">		if (i == 0 || j == 0 || k == 0) {</span>
+<span class="nc" id="L8">			trityp = 4;		</span>
+		}
+		else {
+<span class="fc" id="L11">			trityp = 0;</span>
+<span class="fc bfc" id="L12" title="All 2 branches covered.">			if (i == j) {</span>
+<span class="fc" id="L13">				trityp = trityp + 1;</span>
+			}
+<span class="fc bfc" id="L15" title="All 2 branches covered.">			if (i == k) {</span>
+<span class="fc" id="L16">				trityp = trityp + 2;</span>
+			}
+<span class="fc bfc" id="L18" title="All 2 branches covered.">			if (j == k) {</span>
+<span class="fc" id="L19">				trityp = trityp + 3;</span>
+			}
+<span class="fc bfc" id="L21" title="All 2 branches covered.">			if (trityp == 0) {</span>
+<span class="pc bpc" id="L22" title="3 of 6 branches missed.">				if ((i+j) &lt;= k || (j+k) &lt;= i || (i+k) &lt;= j) {</span>
+<span class="nc" id="L23">					trityp = 4;				</span>
+				}
+				else {
+<span class="fc" id="L26">					trityp = 1;</span>
+				}			
+			}
+			else {
+<span class="fc bfc" id="L30" title="All 2 branches covered.">				if (trityp &gt; 3) {</span>
+<span class="fc" id="L31">					trityp = 3;</span>
+				}
+				else {
+<span class="pc bpc" id="L34" title="1 of 4 branches missed.">					if (trityp == 1 &amp;&amp; (i+j) &gt; k) {</span>
+<span class="fc" id="L35">						trityp = 2;</span>
+					}
+					else {
+						
+<span class="pc bpc" id="L39" title="1 of 4 branches missed.">						if (trityp == 2 &amp;&amp; (i+k) &gt; j) {</span>
+<span class="fc" id="L40">							trityp = 2;						</span>
+						}
+						else {
+<span class="pc bpc" id="L43" title="2 of 4 branches missed.">							if (trityp == 3 &amp;&amp; (j+k) &gt; i) {</span>
+<span class="fc" id="L44">								trityp = 2;</span>
+							}
+							else {
+<span class="nc" id="L47">								trityp = 4;</span>
+							}
+						}
+					}
+				}
+			}
+		}
+<span class="fc" id="L54">		return trityp;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
